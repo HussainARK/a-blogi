@@ -1,32 +1,38 @@
-<h3>Edit a Post</h3>
+<div class="bordered-div">
+    <p class="mat-h1">Edit a Post</p>
 
-<label for="postId">Post ID: </label>
-<br />
-<input min="0" type="number" [(ngModel)]="selectedPostId" name="postId" id="postId">
+    <mat-form-field>
+        <mat-label for="postId">Post ID: </mat-label>
+        <input matInput min="0" type="number" [(ngModel)]="selectedPostId" name="postId" id="postId" required />
+    </mat-form-field>
 
-<br />
-<br />
+    <br />
+    <br />
 
-<label for="postTitle">New Title: </label>
-<br />
-<input type="text" [(ngModel)]="newPostTitle" name="newPostTitle" id="newPostTitle" />
+    <mat-form-field>
+        <mat-label for="postTitle">New Title: </mat-label>
+        <input matInput type="text" [(ngModel)]="newPostTitle" name="newPostTitle" id="newPostTitle" required />
+    </mat-form-field>
 
-<br />
-<br />
+    <br />
+    <br />
 
-<label for="postAuthor">New Author: </label>
-<br />
-<input type="text" [(ngModel)]="newPostAuthor" name="newPostAuthor" id="newPostAuthor" />
+    <mat-form-field>
+        <mat-label for="postAuthor">New Author: </mat-label>
+        <input matInput type="text" [(ngModel)]="newPostAuthor" name="newPostAuthor" id="newPostAuthor" required minlength="3" />
+    </mat-form-field>
 
-<br />
-<br />
+    <br />
+    <br />
 
-<label for="postContent">New Content: </label>
-<br />
-<textarea [(ngModel)]="newPostContent" name="newPostContent" id="newPostAuthor">
-</textarea>
+    <mat-form-field>
+        <mat-label for="postContent">New Content: </mat-label>
+        <textarea mat-autosize matInput [(ngModel)]="newPostContent" name="newPostContent" id="newPostAuthor" required>
+        </textarea>
+    </mat-form-field>
 
-<br />
-<br />
+    <br />
+    <br />
 
-<button (click)="editAPost(selectedPostId, newPostTitle, newPostAuthor, newPostContent);">Edit</button>
+    <button (click)="editAPost(selectedPostId, newPostTitle, newPostAuthor, newPostContent);" color="primary" mat-button>Edit</button>
+</div>

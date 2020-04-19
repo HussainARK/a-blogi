@@ -1,47 +1,31 @@
-<div class="dotted-div">
-    <app-create-post></app-create-post>
-</div>
-<br />
+<div class="bordered-div">
+    <p class="mat-h1">All Posts: </p>
+    <table *ngIf="posts.length > 0" [dataSource]="posts" mat-table class="mat-elevation-z8">
+        <ng-container matColumnDef="bid">
+            <th mat-header-cell *matHeaderCellDef> Post ID </th>
+            <td mat-cell *matCellDef="let post"> {{ post.bid }} </td>
+        </ng-container>
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title </th>
+            <td mat-cell *matCellDef="let post"> {{ post.title }} </td>
+        </ng-container>
+        <ng-container matColumnDef="author">
+            <th mat-header-cell *matHeaderCellDef> Author </th>
+            <td mat-cell *matCellDef="let post"> {{ post.author }} </td>
+        </ng-container>
+        <ng-container matColumnDef="content">
+            <th mat-header-cell *matHeaderCellDef> Content </th>
+            <td mat-cell *matCellDef="let post"> {{ post.content }} </td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let post"><button (click)="deleteAPost(post.bid);" color="warn" mat-button>Delete</button></td>
+        </ng-container>
 
-<hr />
-
-<br />
-
-<div class="dotted-div">
-    <app-edit-post></app-edit-post>
-</div>
-
-<br />
-
-<hr />
-
-<br />
-
-<div class="dotted-div">
-    <h3>All Posts: </h3>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Post ID</th>
-                <th>Post Title</th>
-                <th>Post Author</th>
-                <th>Post Content</th>
-                <th>Delete Post</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="posts.length > 0">
-            <tr *ngFor="let post of posts">
-                <td>{{ post.bid }}</td>
-                <td>{{ post.title }}</td>
-                <td>{{ post.author }}</td>
-                <td>{{ post.content }}</td>
-                <td>
-                    <button (click)="deleteAPost(post.bid);" color="warn" mat-button>Delete</button>
-                </td>
-            </tr>
-        </tbody>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+
     <div *ngIf="posts.length == 0">
         <p>There are no Posts, or There is no Internet Connection</p>
     </div>

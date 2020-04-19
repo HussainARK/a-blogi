@@ -1,0 +1,17 @@
+mat-toolbar {
+    margin-bottom: 3px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.active {
+    color: pink;
+}

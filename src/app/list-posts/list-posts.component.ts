@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class ListPostsComponent {
   // Get the Posts
   public posts = [];
+  public displayedColumns: string[] = ['bid', 'title', 'author', 'content', 'delete'];
 
   constructor(private _service: PostsService) { }
 

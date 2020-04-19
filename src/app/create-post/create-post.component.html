@@ -1,25 +1,29 @@
-<h3>Create a Post</h3>
+<div class="bordered-div">
+    <p class="mat-h1">Create a Post</p>
+    <mat-form-field>
+        <mat-label for="postTitle">Title</mat-label>
+        <input matInput placeholder="Ex. Welcome" type="text" [(ngModel)]="postTitle" name="postTitle" id="postTitle" required />
+    </mat-form-field>
 
-<label for="postTitle">Title: </label>
-<br />
-<input type="text" [(ngModel)]="postTitle" name="postTitle" id="postTitle" />
+    <br />
+    <br />
 
-<br />
-<br />
+    <mat-form-field>
+        <mat-label for="postAuthor">Author: </mat-label>
+        <input matInput type="text" placeholder="Ex. Me!" [(ngModel)]="postAuthor" name="postAuthor" id="postAuthor" required minlength="3" />
+    </mat-form-field>
 
-<label for="postAuthor">Author: </label>
-<br />
-<input type="text" [(ngModel)]="postAuthor" name="postAuthor" id="postAuthor" />
+    <br />
+    <br />
 
-<br />
-<br />
+    <mat-form-field>
+        <mat-label for="postContent">Content: </mat-label>
+        <textarea placeholder="Ex. A lot of text" mat-autosize matInput [(ngModel)]="postContent" name="postContent" required id="postAuthor">
+        </textarea>
+    </mat-form-field>
 
-<label for="postContent">Content: </label>
-<br />
-<textarea [(ngModel)]="postContent" name="postContent" id="postAuthor">
-</textarea>
+    <br />
+    <br />
 
-<br />
-<br />
-
-<button (click)="createAPost(postTitle, postAuthor, postContent);">Create +</button>
+    <button (click)="createAPost(postTitle, postAuthor, postContent);" color="primary" mat-button>Create +</button>
+</div>

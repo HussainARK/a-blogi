@@ -1,9 +1,18 @@
 @import 'themes';
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
-body * {
-    font-family: sans-serif;
+body {
+    margin: 10px 10px;
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.bordered-div {
+    border: 1px solid #ccc;
+    padding: 10px 10px;
 }

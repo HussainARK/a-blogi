@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "a-blogi": {
+      "hosting": {
+        "a-blogi": [
+          "a-blogi"
+        ]
+      }
+    }
+  }
+}
