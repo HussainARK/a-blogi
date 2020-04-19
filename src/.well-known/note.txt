@@ -1,0 +1,8 @@
+This Website is created in about 2 days which is something very exciting!
+
+I'm HussainARK, I'm 13, I'm the Founder of HARK.
+I love creating Simple Websites and APIs using Python 3 and Javascript.
+
+I think that It's a very beautiful thing to implement Simple Useless things.
+
+Thanks for wasting time to read this. :)
