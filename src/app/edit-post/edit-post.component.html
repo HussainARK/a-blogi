@@ -1,0 +1,32 @@
+<h3>Edit a Post</h3>
+
+<label for="postId">Post ID: </label>
+<br />
+<input min="0" type="number" [(ngModel)]="selectedPostId" name="postId" id="postId">
+
+<br />
+<br />
+
+<label for="postTitle">New Title: </label>
+<br />
+<input type="text" [(ngModel)]="newPostTitle" name="newPostTitle" id="newPostTitle" />
+
+<br />
+<br />
+
+<label for="postAuthor">New Author: </label>
+<br />
+<input type="text" [(ngModel)]="newPostAuthor" name="newPostAuthor" id="newPostAuthor" />
+
+<br />
+<br />
+
+<label for="postContent">New Content: </label>
+<br />
+<textarea [(ngModel)]="newPostContent" name="newPostContent" id="newPostAuthor">
+</textarea>
+
+<br />
+<br />
+
+<button (click)="editAPost(selectedPostId, newPostTitle, newPostAuthor, newPostContent);">Edit</button>

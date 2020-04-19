@@ -1,0 +1,48 @@
+<div class="dotted-div">
+    <app-create-post></app-create-post>
+</div>
+<br />
+
+<hr />
+
+<br />
+
+<div class="dotted-div">
+    <app-edit-post></app-edit-post>
+</div>
+
+<br />
+
+<hr />
+
+<br />
+
+<div class="dotted-div">
+    <h3>All Posts: </h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Post ID</th>
+                <th>Post Title</th>
+                <th>Post Author</th>
+                <th>Post Content</th>
+                <th>Delete Post</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="posts.length > 0">
+            <tr *ngFor="let post of posts">
+                <td>{{ post.bid }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.content }}</td>
+                <td>
+                    <button (click)="deleteAPost(post.bid);" color="warn" mat-button>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="posts.length == 0">
+        <p>There are no Posts, or There is no Internet Connection</p>
+    </div>
+</div>

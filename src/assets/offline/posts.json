@@ -1,0 +1,14 @@
+[
+    {
+        "bid": 1,
+        "title": "Title Wohoo.",
+        "author": "Me",
+        "content": "This is the Content!"
+    },
+    {
+        "bid": 2,
+        "title": "Another Title.",
+        "author": "Another Me",
+        "content": "Another Content!"
+    }
+]

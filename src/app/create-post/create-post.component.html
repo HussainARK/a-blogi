@@ -1,0 +1,25 @@
+<h3>Create a Post</h3>
+
+<label for="postTitle">Title: </label>
+<br />
+<input type="text" [(ngModel)]="postTitle" name="postTitle" id="postTitle" />
+
+<br />
+<br />
+
+<label for="postAuthor">Author: </label>
+<br />
+<input type="text" [(ngModel)]="postAuthor" name="postAuthor" id="postAuthor" />
+
+<br />
+<br />
+
+<label for="postContent">Content: </label>
+<br />
+<textarea [(ngModel)]="postContent" name="postContent" id="postAuthor">
+</textarea>
+
+<br />
+<br />
+
+<button (click)="createAPost(postTitle, postAuthor, postContent);">Create +</button>
