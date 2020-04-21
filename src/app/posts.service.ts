@@ -2,9 +2,6 @@ import { environment } from './../environments/environment.prod';
 import { Injectable } from '@angular/core';
 
 import axios from 'axios';
-// import { config } from 'dotenv';
-
-// config();
 
 @Injectable({ providedIn: 'root' })
 export class PostsService {
